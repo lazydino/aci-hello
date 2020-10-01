@@ -1,0 +1,6 @@
+# Password can be retrieved from 'Access Keys' in Azure.
+# Check out password for login server magnetar.azurecr.io
+az container create --resource-group Default-Web-WestUS --name aci-tutorial-app \
+--image magnetar.azurecr.io/aci-tutorial-app:v2 --cpu 1 --memory 1 --registry-login-server magnetar.azurecr.io \
+--registry-username magnetar --registry-password d92EylEdH=ZUzkauX47lvEm6zNaSCgIp \
+--dns-name-label magnetarcr --ports 80
