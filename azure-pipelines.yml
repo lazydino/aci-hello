@@ -38,6 +38,8 @@ stages:
         tags: |
           $(tag)
     - task: AzureWebAppContainer@1
+      displayName: Deploy to container instance
       inputs:
         azureSubscription: 'Magnetar Azure Cloud (571e0cb7-1909-4583-ba8d-bce0f82b9e76)'
         appName: '$(imageRepository)'
+        imageName: magnetar.azurecr.io/acitutorialapp:latest
