@@ -37,3 +37,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'Magnetar Azure Cloud (571e0cb7-1909-4583-ba8d-bce0f82b9e76)'
+        appName: '$(imageRepository)'
